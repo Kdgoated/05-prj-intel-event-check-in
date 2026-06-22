@@ -7,7 +7,9 @@
 
 body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background-color: #f5f5f5;
+  background:
+    radial-gradient(circle at top, rgba(0, 113, 197, 0.08), transparent 34%),
+    linear-gradient(180deg, #f8fbff 0%, #edf5fb 100%);
   color: #333;
   line-height: 1.6;
   min-height: 100vh;
@@ -25,7 +27,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -254,8 +257,9 @@ button .fas {
 }
 
 .success-message {
-  background-color: #e8f4fc;
+  background: linear-gradient(135deg, #e8f4fc, #f0f9ff);
   color: #003c71;
+  border: 1px solid rgba(0, 113, 197, 0.12);
 }
 
 /* Counter */
@@ -348,6 +352,73 @@ select {
   color: #475569;
 }
 
+.team-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.attendee-roster {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f1f5f9;
+  text-align: left;
+}
+
+.attendee-roster h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.attendee-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.attendee-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.attendee-item.water {
+  border-left: 5px solid #1d9bf0;
+}
+
+.attendee-item.zero {
+  border-left: 5px solid #22c55e;
+}
+
+.attendee-item.power {
+  border-left: 5px solid #f59e0b;
+}
+
+.attendee-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.attendee-team {
+  font-size: 14px;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.attendee-empty {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  color: #64748b;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -380,5 +451,10 @@ select {
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+
+  .attendee-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
